@@ -52,7 +52,7 @@ body {
 /* Container Background */
 .container {
     color: white;
-    background-image: url('./Aadi.jpeg'); /* Background image */
+    background-image: url('media/Aadi.jpeg'); /* Background image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -111,7 +111,7 @@ body {
     align-items: center;
     text-align: center;
     color: white;
-    background: url('./Aadi.jpeg') center/cover no-repeat;
+    background: url('media/Aadi.jpeg') center/cover no-repeat;
     position: relative;
 }
 
