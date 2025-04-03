@@ -37,7 +37,7 @@ body {
 #navbar a img {
     height: 40px; /* Adjust size */
     width: 40px;
-    border-radius: 50%; /* Make icons circular */
+    border-radius: 20px; /* Make icons circular */
     background: rgb(16, 13, 13); /* White background for contrast */
     padding: 5px; /* Add padding for better spacing */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -364,6 +364,7 @@ body {
     padding: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin: 15px 0px;
 }
 
 .skill-icon:hover {
@@ -372,8 +373,8 @@ body {
 }
 
 .skill-icon img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
 }
 
 .skill-icon span {
