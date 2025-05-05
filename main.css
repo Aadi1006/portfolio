@@ -143,25 +143,6 @@ html, body {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* Moving Text */
-.moving-text {
-  position: absolute;
-  top: 20%;
-  white-space: nowrap;
-  font-size: 28px;
-  font-weight: bold;
-  color: white;
-  animation: moveText 10s linear infinite;
-}
-
-@keyframes moveText {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
 
 /* Project Expo Section */
 .project-expo {
