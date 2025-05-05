@@ -1,20 +1,16 @@
-/* General Styles */
-
-html {
+html, body {
   scroll-behavior: smooth;
-}
-body {
-  background-color: black;
   margin: 0;
+  background-color: black;
   font-family: Arial, sans-serif;
-  scroll-behavior: smooth;
 }
 
-/* Navbar Styling */
+/* Navbar Container */
 #navbar {
   display: flex;
-  justify-content: space-between; /* Space out items */
-  align-items: center; /* Align vertically */
+  justify-content: space-between;
+  align-items: center;
+
   position: fixed;
   top: 20px;
   left: 50%;
@@ -30,109 +26,53 @@ body {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-#navbar nav {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-
-#navbar h4 {
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-  margin: 0;
-  margin-right: auto; /* Push the links to the rightmost area */
-}
-
-#navbar a {
-  margin-left: auto; /* Ensure links are aligned to the right */
-}
-
 /* Navbar Content */
 #navbar nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px; /* Space between items */
+  width: 100%;
+  gap: 20px;
 }
 
+/* Navbar Title */
+#navbar h4 {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  margin-right: auto;
+}
+
+/* Navbar Links */
+#navbar a {
+  margin-left: auto;
+}
+
+/* Social Links Container */
 .social-links {
   display: flex;
   align-items: center;
-  gap: 10px; /* Space between GitHub and LinkedIn links */
+  gap: 10px;
 }
 
 /* Social Media Icons */
 #navbar a img {
-  height: 40px; /* Adjust size */
+  height: 40px;
   width: 40px;
-  border-radius: 20px; /* Make icons circular */
-  background: rgb(16, 13, 13); /* White background for contrast */
-  padding: 5px; /* Add padding for better spacing */
+  border-radius: 20px;
+  background: rgb(16, 13, 13);
+  padding: 5px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Hover Effect */
+/* Hover Effects on Icons */
 #navbar a img:hover {
-  transform: scale(1.1); /* Slight zoom effect */
-  box-shadow: 0px 0px 10px rgba(28, 25, 25, 0.5); /* Glow effect */
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgba(28, 25, 25, 0.5);
 }
 
-/* Container Background */
-.container {
-  color: white;
-  background-image: url("media/Aadi.jpeg"); /* Background image */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  /* align-items: center; */
-  text-align: center;
-  font-size: 24px;
-  position: relative;
-}
-
-/* Adding a dark overlay */
-.container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* Adjust opacity for darkness */
-  z-index: 1;
-}
-
-/* Ensure text is above the overlay */
-.container h1,
-.container a {
-  position: relative;
-  z-index: 2;
-}
-
-.moving-text {
-  position: absolute;
-  top: 20%;
-  white-space: nowrap;
-  font-size: 28px;
-  font-weight: bold;
-  color: white;
-  animation: moveText 10s linear infinite;
-}
-
-@keyframes moveText {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
+/* Hero Section */
 .hero-section {
   height: 100vh;
   display: flex;
@@ -159,11 +99,6 @@ body {
 .hero-section * {
   position: relative;
   z-index: 2;
-}
-
-.intro-text {
-  font-size: 18px;
-  font-weight: 300;
 }
 
 .hero-title {
@@ -208,48 +143,39 @@ body {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* Custom Scrollbar Styling */
-::-webkit-scrollbar {
-  width: 8px; /* Width of the scrollbar */
+/* Moving Text */
+.moving-text {
+  position: absolute;
+  top: 20%;
+  white-space: nowrap;
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  animation: moveText 10s linear infinite;
 }
 
-::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1); /* Track background */
-  border-radius: 10px; /* Rounded corners */
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.4); /* Thumb color */
-  border-radius: 10px; /* Rounded corners */
-  transition: background 0.3s ease-in-out;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.6); /* Thumb hover color */
-}
-
-/* For Firefox */
-* {
-  scrollbar-width: thin; /* Thin scrollbar */
-  scrollbar-color: rgba(255, 255, 255, 0.4) rgba(255, 255, 255, 0.1); /* Thumb and track colors */
+@keyframes moveText {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 /* Project Expo Section */
 .project-expo {
   padding: 50px 20px;
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); /* Responsive grid */
-  gap: 20px; /* Space between cards */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .project-card {
-  background: #1e1e1e; /* Dark card background */
+  background: #1e1e1e;
   border-radius: 15px;
   padding: 20px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   color: white;
   display: flex;
   flex-direction: column;
@@ -259,8 +185,8 @@ body {
 }
 
 .project-card:hover {
-  transform: translateY(-10px); /* Lift effect */
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 .project-card img {
@@ -296,72 +222,10 @@ body {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* Testimonials Section */
-.testimonials {
-  padding: 50px 20px;
-  background: #121212; /* Dark background for contrast */
-  color: white;
-  text-align: center;
-}
-
-.testimonials h2 {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); /* Responsive grid */
-  gap: 20px; /* Space between cards */
-}
-
-.testimonial-card {
-  background: #1e1e1e; /* Dark card background */
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.testimonial-card:hover {
-  transform: translateY(-10px); /* Lift effect */
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
-}
-
-.testimonial-card img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%; /* Circular profile picture */
-  margin-bottom: 15px;
-  border: 2px solid white; /* Border for emphasis */
-}
-
-.testimonial-card p {
-  font-size: 14px;
-  font-weight: 300;
-  margin: 10px 0;
-}
-
-.testimonial-card h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 5px 0;
-  color: #f0f0f0; /* Slightly lighter text */
-}
-
 /* Skills Section */
 .skills {
   padding: 50px 20px;
-  background: #0d0d0d; /* Dark background for contrast */
+  background: #0d0d0d;
   color: white;
   text-align: center;
 }
@@ -374,23 +238,16 @@ body {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(150px, 1fr)
-  ); /* Responsive grid */
-  gap: 20px; /* Space between items */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
   justify-items: center;
-}
-
-.skill-category {
-  margin-bottom: 30px;
 }
 
 .skill-category h3 {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 15px;
-  color: #f0f0f0; /* Slightly lighter text */
+  color: #f0f0f0;
 }
 
 .skill-icon {
@@ -398,17 +255,17 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  background: #1e1e1e; /* Dark card background */
+  background: #1e1e1e;
   border-radius: 10px;
   padding: 15px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   margin: 15px 0px;
 }
 
 .skill-icon:hover {
-  transform: translateY(-5px); /* Lift effect */
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 .skill-icon img {
